@@ -1,0 +1,24 @@
+<h1 class="mb-5">Clientes</h1>
+
+<table class="table table-hover">
+  <thead>
+    <tr>
+        <th>ID</th>
+        <th>Nome</th>
+        <th>CPF</th>
+        <th>Data</th>
+        <th>Email</th>
+    </tr>
+  </thead>
+  <tbody>
+    @for (customer of customers; track customer.id) {
+        <tr >
+            <td>{{ customer.id }}</td>
+            <td>{{ customer.name }}</td>
+            <td>{{ customer.cpf }}</td>
+            <td>{{ customer.dateOfBirth | date:'dd/MM/yyyy' }}</td>
+            <td>{{ customer.email }}</td>
+        </tr>
+    }
+  </tbody>
+</table>
