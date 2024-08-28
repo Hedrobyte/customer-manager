@@ -27,7 +27,7 @@
             <td>
               <div class="btn-group">
                 <button class="btn btn-primary" [routerLink]="[customer.id, 'edit']">Editar</button>
-                <button class="btn btn-danger">Deletar</button>
+                <button class="btn btn-danger" (click)="deleteCustomer(customer.id!)">Deletar</button>
               </div>
             </td>
         </tr>
