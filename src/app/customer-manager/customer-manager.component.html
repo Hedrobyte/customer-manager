@@ -24,6 +24,12 @@
             <td>{{ customer.cpf }}</td>
             <td>{{ customer.dateOfBirth | date:'dd/MM/yyyy' }}</td>
             <td>{{ customer.email }}</td>
+            <td>
+              <div class="btn-group">
+                <button class="btn btn-primary" [routerLink]="[customer.id, 'edit']">Editar</button>
+                <button class="btn btn-danger">Deletar</button>
+              </div>
+            </td>
         </tr>
     }
   </tbody>
