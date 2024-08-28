@@ -1,4 +1,4 @@
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpParams } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { Customer } from '../models/customer.model';
@@ -31,4 +31,14 @@ export class CustomerManagerService {
   deleteCustomer(id: number): Observable<void> {
     return this.http.delete<void>(`${this.apiUrl}/${id}`);
   }
+
+  searchCustomersByName(name: string): Observable<Customer[]> {
+    return this.http.get<Customer[]>(`${this.apiUrl}/search`, { params: { name } });
+  }
+
+  searchCustomersByCPF(cpf: string): Observable<Customer[]> {
+    return this.http.get<Customer[]>(`${this.apiUrl}/search`, { params: { cpf } });
+  }
+  
+  
 }
