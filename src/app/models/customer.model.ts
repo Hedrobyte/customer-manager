@@ -1,5 +1,5 @@
 export interface Customer {
-    id: number;
+    id?: number;
     name: string;
     cpf: string;
     dateOfBirth: string; // Date em formato ISO 8601

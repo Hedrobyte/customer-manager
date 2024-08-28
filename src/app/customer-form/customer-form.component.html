@@ -1,0 +1,35 @@
+<h2 class="mb-5"> Novo Cliente</h2>
+
+<div class="row row-cols-4 justify-content-center">
+    <form [formGroup]="form" (ngSubmit)="createCustomer()">
+        <div class="mb-3">
+            <label for="name">Nome</label>
+            <input id="name" type="text" placeholder="Nome" class="form-control" formControlName="name">
+        </div>
+    
+        <div class="mb-3">
+            <label for="cpf">CPF</label>
+            <input id="cpf" type="text" placeholder="000.000.000-00" maxlength="11" class="form-control" formControlName="cpf">
+        </div>
+    
+        <div class="mb-3">
+            <label for="dateOfBirth">Data de Nascimento</label>
+            <input id="dateOfBirth" type="date" placeholder="Data de Nascimento" class="form-control" formControlName="dateOfBirth">
+        </div>
+
+        <div class="mb-3">
+            <label for="email">Email</label>
+            <input id="email" type="email" placeholder="seuemail@exemplo.com" class="form-control" maxlength="100" formControlName="email">
+          </div>
+          
+    
+        <div class="text-end">
+            <button type="button" class="btn btn-light" routerLink="/">
+                Cancelar
+            </button>
+            <button type="submit" class="btn btn-primary ms-2">
+                Criar Cliente
+            </button>
+        </div>  
+    </form>
+</div>

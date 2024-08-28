@@ -4,5 +4,9 @@ export const routes: Routes = [
     {
         path: '',
         loadComponent: () => import('./customer-manager/customer-manager.component')
+    },
+    {
+        path: 'new',
+        loadComponent: () => import('./customer-form/customer-form.component')
     }
 ];
